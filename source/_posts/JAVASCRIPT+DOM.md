@@ -1,3 +1,10 @@
+---
+title: "JavaScript简介"
+date: 2017.5.26 17:40:15 
+tags: 'Notes'
+categoies: JavaScript
+ 
+---
 # 第一章  JavaScript简史  
 
 ## 本章内容  
