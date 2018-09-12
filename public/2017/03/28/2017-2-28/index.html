@@ -87,25 +87,24 @@
 
 
 
-<meta name="description" content="Express简介Express 是一个简洁而灵活的 node.js Web应用框架, 提供了一系列强大特性帮助你创建各种 Web 应用，和丰富的 HTTP 工具。使用 Express 可以快速地搭建一个完整功能的网站，它有一套健壮的特性，可用于开发单页、多页和混合Web应用。  此文介绍如何使用Express搭建多人博客。
-所需环境Node.js： 4.4.7Express： 4.14.1Mon">
+<meta name="description" content="Express简介Express 是一个简洁而灵活的 node.js Web应用框架, 提供了一系列强大特性帮助你创建各种 Web 应用，和丰富的 HTTP 工具。使用 Express 可以快速地搭建一个完整功能的网站，它有一套健壮的特性，可用于开发单页、多页和混合Web应用。  此文介绍如何使用Express搭建多人博客。 所需环境Node.js： 4.4.7Express： 4.14.1Mon">
+<meta name="keywords" content="Node.js,Express,MongoDB">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NodeJS+Express+MongoDB搭建个人博客（1）">
-<meta property="og:url" content="http://yoursite.com/2017/03/28/2017-2-28/index.html">
+<meta property="og:url" content="http://wyong.xyz/2017/03/28/2017-2-28/index.html">
 <meta property="og:site_name" content="Ordinary">
-<meta property="og:description" content="Express简介Express 是一个简洁而灵活的 node.js Web应用框架, 提供了一系列强大特性帮助你创建各种 Web 应用，和丰富的 HTTP 工具。使用 Express 可以快速地搭建一个完整功能的网站，它有一套健壮的特性，可用于开发单页、多页和混合Web应用。  此文介绍如何使用Express搭建多人博客。
-所需环境Node.js： 4.4.7Express： 4.14.1Mon">
-<meta property="og:image" content="http://yoursite.com/images/2017-02-28-1.png">
-<meta property="og:image" content="http://yoursite.com/images/2017-02-28-2.png">
-<meta property="og:image" content="http://yoursite.com/images/2017-02-28-3.png">
-<meta property="og:image" content="http://yoursite.com/images/2017-02-28-4.png">
-<meta property="og:image" content="http://yoursite.com/images/2017-02-28-5.png">
-<meta property="og:updated_time" content="2017-05-17T10:00:53.015Z">
+<meta property="og:description" content="Express简介Express 是一个简洁而灵活的 node.js Web应用框架, 提供了一系列强大特性帮助你创建各种 Web 应用，和丰富的 HTTP 工具。使用 Express 可以快速地搭建一个完整功能的网站，它有一套健壮的特性，可用于开发单页、多页和混合Web应用。  此文介绍如何使用Express搭建多人博客。 所需环境Node.js： 4.4.7Express： 4.14.1Mon">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://wyong.xyz/images/2017-02-28-1.png">
+<meta property="og:image" content="http://wyong.xyz/images/2017-02-28-2.png">
+<meta property="og:image" content="http://wyong.xyz/images/2017-02-28-3.png">
+<meta property="og:image" content="http://wyong.xyz/images/2017-02-28-4.png">
+<meta property="og:image" content="http://wyong.xyz/images/2017-02-28-5.png">
+<meta property="og:updated_time" content="2017-05-17T10:00:53.016Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NodeJS+Express+MongoDB搭建个人博客（1）">
-<meta name="twitter:description" content="Express简介Express 是一个简洁而灵活的 node.js Web应用框架, 提供了一系列强大特性帮助你创建各种 Web 应用，和丰富的 HTTP 工具。使用 Express 可以快速地搭建一个完整功能的网站，它有一套健壮的特性，可用于开发单页、多页和混合Web应用。  此文介绍如何使用Express搭建多人博客。
-所需环境Node.js： 4.4.7Express： 4.14.1Mon">
-<meta name="twitter:image" content="http://yoursite.com/images/2017-02-28-1.png">
+<meta name="twitter:description" content="Express简介Express 是一个简洁而灵活的 node.js Web应用框架, 提供了一系列强大特性帮助你创建各种 Web 应用，和丰富的 HTTP 工具。使用 Express 可以快速地搭建一个完整功能的网站，它有一套健壮的特性，可用于开发单页、多页和混合Web应用。  此文介绍如何使用Express搭建多人博客。 所需环境Node.js： 4.4.7Express： 4.14.1Mon">
+<meta name="twitter:image" content="http://wyong.xyz/images/2017-02-28-1.png">
 
 
 
@@ -133,7 +132,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/28/2017-2-28/"/>
+  <link rel="canonical" href="http://wyong.xyz/2017/03/28/2017-2-28/"/>
 
 
 
@@ -320,7 +319,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/28/2017-2-28/">
+    <link itemprop="mainEntityOfPage" href="http://wyong.xyz/2017/03/28/2017-2-28/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ordinary">
@@ -494,7 +493,7 @@ module.exports = app;
 res.render(&apos;index&apos;, { title: &apos;首页&apos; });
   });
 };
-</code></pre><p>这样我们就配置好路由了，再次运行如下：<br><img src="/images/2017-02-28-5.png" alt=""><br>路径规则还支持正则表达式，更多请查阅<a href="http://www.expressjs.com.cn/" target="_blank" rel="external">Express官方文档</a>  </p>
+</code></pre><p>这样我们就配置好路由了，再次运行如下：<br><img src="/images/2017-02-28-5.png" alt=""><br>路径规则还支持正则表达式，更多请查阅<a href="http://www.expressjs.com.cn/" target="_blank" rel="noopener">Express官方文档</a>  </p>
 <p>接下来我们来一起搭建简单的界面，这里我用到bootstrap框架：</p>
 <p>我们先在index.js中将要展示的界面进行路由的配置：</p>
 <pre><code>module.exports = function(app) {
@@ -599,8 +598,8 @@ app.set(&apos;view engine&apos;, &apos;ejs&apos;);
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/09/2017-3-20/" rel="prev" title="生活呢">
-                生活呢 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/15/2017-5-13（JavaScript 100实例(2))/" rel="prev" title="JavaScript100个实例(2)">
+                JavaScript100个实例(2) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -630,7 +629,7 @@ app.set(&apos;view engine&apos;, &apos;ejs&apos;);
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/03/28/2017-2-28/"
-           data-title="NodeJS+Express+MongoDB搭建个人博客（1）" data-url="http://yoursite.com/2017/03/28/2017-2-28/">
+           data-title="NodeJS+Express+MongoDB搭建个人博客（1）" data-url="http://wyong.xyz/2017/03/28/2017-2-28/">
       </div>
     
   </div>
@@ -679,7 +678,7 @@ app.set(&apos;view engine&apos;, &apos;ejs&apos;);
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -793,7 +792,7 @@ app.set(&apos;view engine&apos;, &apos;ejs&apos;);
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -1072,6 +1071,21 @@ app.set(&apos;view engine&apos;, &apos;ejs&apos;);
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 
