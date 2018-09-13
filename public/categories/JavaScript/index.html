@@ -90,7 +90,7 @@
 <meta name="description" content="机会总是留给有准备的人">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ordinary">
-<meta property="og:url" content="http://wyong.xyz/categories/JavaScript/index.html">
+<meta property="og:url" content="http://wyong.xyz/categories/Javascript/index.html">
 <meta property="og:site_name" content="Ordinary">
 <meta property="og:description" content="机会总是留给有准备的人">
 <meta property="og:locale" content="zh-Hans">
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://wyong.xyz/categories/JavaScript/"/>
+  <link rel="canonical" href="http://wyong.xyz/categories/Javascript/"/>
 
 
 
 
 
-  <title> 分类: JavaScript | Ordinary </title>
+  <title> 分类: Javascript | Ordinary </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -304,7 +304,7 @@
   <section id="posts" class="posts-collapse">
     <div class="collection-title">
       <h2 >
-        JavaScript
+        Javascript
         <small>分类</small>
       </h2>
     </div>
@@ -317,37 +317,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2018/09/12/2017-5-12(JavaScript 100个实例(1))/" itemprop="url">
+            <a class="post-title-link" href="/2017/05/19/2017-5-19-(原型模式)/" itemprop="url">
               
-                <span itemprop="name">JavaScript 100个实例(1)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-09-12T21:45:52+08:00"
-              content="2018-09-12" >
-          09-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/14/2017-5-14(JavaScript 100实例(3))/" itemprop="url">
-              
-                <span itemprop="name">JavaScript100个实例(3)</span>
+                <span itemprop="name">读《JavaScript设计模式》</span>
               
             </a>
         
@@ -355,65 +327,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-14T21:35:38+08:00"
-              content="2017-05-14" >
-          05-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/13/2017-5-13（JavaScript 100实例(2))/" itemprop="url">
-              
-                <span itemprop="name">JavaScript100个实例(2)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-13T21:35:37+08:00"
-              content="2017-05-13" >
-          05-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/28/2017-2-28/" itemprop="url">
-              
-                <span itemprop="name">NodeJS+Express+MongoDB搭建个人博客（1）</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-28T12:00:00+08:00"
-              content="2017-02-28" >
-          02-28
+              datetime="2017-05-19T13:49:37+08:00"
+              content="2017-05-19" >
+          05-19
         </time>
       </div>
 
@@ -790,6 +706,81 @@
                     }
                     if(start == 0){
                       end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+  
+
+</body>
+</html>
+    end = 50;
                     }
                     if(end > content.length){
                       end = content.length;
