@@ -39,13 +39,14 @@
 ```
 
 ### 四、域名解析
-    得到的ip绑定到A上
+
+#### 得到的ip绑定到A上
 
 ```
     ping wangyongtan.github.io 
 ```
 
-    把CANME绑定
+#### 把CANME绑定
 
 ```
     wangyongtan.github.io
